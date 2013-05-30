@@ -8,9 +8,7 @@ module Pdftk
     begin
       require 'docsplit'
 
-      Docsplit.configure do |config|
-        config.pdftk = PDFTK_PATH
-      end
+      Docsplit.config[:exe_path] = PDFTK_PATH
     rescue LoadError
     end
 
